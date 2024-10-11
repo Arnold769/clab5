@@ -41,7 +41,7 @@ def home():
     cur.execute("SELECT visit_count FROM visits WHERE id = 1;")
     postgres_count = cur.fetchone()[0]
 
-    return f"This page has been visited {count} times (Redis), {postgres_count} times (PostgreSQL)."
+    return f"This page has been visited {count} times (Redis), This page has been visited {postgres_count} times (PostgreSQL)."
 
 
 if __name__ == "__main__":
